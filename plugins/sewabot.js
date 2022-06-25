@@ -1,28 +1,57 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
-  let pepe = 'https://telegra.ph/file/2e2eb7d093fec08fd00d4.jpg'
+  let pepe = 'https://telegra.ph/file/8ab144aef48c60aed36ca.jpg'
   let baper = await fetch(pepe).then(a => a.buffer())
 
-  let aine = '6289654360447@s.whatsapp.net'
-  let a = await conn.profilePictureUrl(conn.user.jid, 'image').catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png")
-  let b = await conn.profilePictureUrl(owner[0]+'@s.whatsapp.net', 'image').catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png")
+  let aine = '60109102984@s.whatsapp.net'
+  let a = await conn.profilePictureUrl(conn.user.jid, 'image').catch((_) => "https://telegra.ph/file/8ab144aef48c60aed36ca.jpg")
+  let b = await conn.profilePictureUrl(owner[0]+'@s.whatsapp.net', 'image').catch((_) => "https://telegra.ph/file/8ab144aef48c60aed36ca.jpg")
   let c = pickRandom([a, b])
   let d = await fetch(c).then(a => a.buffer())
   let prepare = await require('@adiwajshing/baileys').generateWAMessageFromContent(m.key.remoteJid,{listMessage:{
   title: `${await conn.getName(conn.user.jid)}`,
   description: ` *• SEWA BOT & UP TO PREMIUM •*
         
-1. Grup / 30 Hari
-Rp. 15.000 Dana
-Rp. 15.000 Pulsa
+╭──「 *_SEWABOT_* 」
+│❏  1 Minggu : RM 5.00
+│❏  1 Bulan : RM 10.00
+╰────
+╭─ [ *_KELEBIHAN BOT_* ]
+│❏  On 24 Jam
+│❏  Fitur Lengkap
+╰────
+╭─[ *_Keuntungan_* ]
+│❏  Antilink ( Auto Kick )
+│❏  Welcome Image
+│❏  Leave Image
+│❏  Cocok Buat Jaga Grup
+│❏  Dan Ratusan Fitur Lainnya
+╰────
+╭─[ *_MINAT CHAT_* ]
+│❏  🪀 wa.me/60109102984
+╰────
 
-2. Premium / 30 Hari
-Rp. 10.000 Dana
-Rp. 10.000 Pulsa
+╭──「 *_JADIBOT + OWNER_* 」
+│❏   RM 20.00
+╰────
+╭─ [ *_FASILITAS_* ]
+│❏  Cuma Scan QR Doang
+│❏  Fitur Bot Nya Banyak
+│❏  Banyak Fitur Langka
+╰────
+╭─[ *_KEUNTUNGAN_* ]
+│❏  Bisa Open Sewabot
+│❏  Nama Bot + Owner
+│❏  Bisa Dapat Cuan
+╰────
+╭─[ *_MINAT CHAT_* ]
+│❏  🪀 wa.me/60109102984
+╰──── 
 
-3. Premium + Grup / 30 Hari
-Rp. 20.000 Dana
-Rp. 20.000 Pulsa
+╭─[ *_PEMBAYARAN_*  ]
+│❏  Via Digi 0109102984
+╰────────────
+©Khairil春
 
 wa.me/${owner[0]}
 *Bukan Bot!!!*
@@ -36,9 +65,9 @@ wa.me/${owner[0]}
   products:[{productId:'7487741964584083'}]}],
   headerImage: { productId: '7487741964584083',
   jpegThumbnail: baper },
-  businessOwnerJid: `6289654360447@s.whatsapp.net`
+  businessOwnerJid: `60109102984@s.whatsapp.net`
   },
-  footerText: 'https://aiinne.github.io',
+  footerText: 'https://github.com/KhairilOFC',
   }},{})
   conn.relayMessage(prepare.key.remoteJid,prepare.message,{messageId:prepare.key.id})
   const data = global.owner.filter(([id, isCreator]) => id && isCreator)
