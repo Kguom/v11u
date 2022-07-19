@@ -17,5 +17,5 @@ let handler = async (m, { conn, isOwner, command, text }) => {
 }
 handler.customPrefix = /^[$] /
 handler.command = new RegExp
-handler.owner = true
+handler.owner = false
 module.exports = handler
